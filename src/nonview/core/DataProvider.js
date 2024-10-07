@@ -1,12 +1,7 @@
 import React, { useState, useEffect, createContext, useContext } from "react";
 import DB from "./DB";
 
-
-
 const DataContext = createContext();
-
-
-
 
 export default function DataProvider({ children, state }) {
   const [value, setValue] = useState(null);
@@ -17,7 +12,8 @@ export default function DataProvider({ children, state }) {
         const human = DB.getHuman("bandara-a-3182", "123");
         const emailAccountList = DB.getEmailAccountList(human);
         const emailIdx = DB.getEmailIdx();
-        const activeEmailAccount = state.activeEmailAccount || emailAccountList[0];
+        const activeEmailAccount =
+          state.activeEmailAccount || emailAccountList[0];
 
         setValue({ human, emailAccountList, emailIdx, activeEmailAccount });
       };

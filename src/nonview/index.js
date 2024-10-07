@@ -6,10 +6,4 @@ import Email from "./core/Email.js";
 import EmailAccount from "./core/EmailAccount.js";
 import Human from "./core/Human.js";
 
-export {
-  DB,
-  DataProvider,
-  Email,
-  EmailAccount,
-  Human,
-};
+export { DB, DataProvider, Email, EmailAccount, Human };
